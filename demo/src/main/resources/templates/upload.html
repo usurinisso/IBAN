@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>File Validator</title>
+</head>
+<body>
+
+    <h1>IBAN Validator</h1>
+    <p>Please select file containing IBAN(s) to validate.</p>
+    <input type="file" id="ibanfile" name="ibanfile">
+    <button type="button">Validate</button><br><br>
+    <form th:action="@{/}" method="get">
+        <button type="Submit">Go to String Validator page</button>
+    </form>
+
+</body>
+</html>
