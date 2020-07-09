@@ -7,9 +7,12 @@
 <body>
 
     <h1>IBAN Validator</h1>
-    <p>Please select file containing IBAN(s) to validate.</p>
-    <input type="file" id="ibanfile" name="ibanfile">
-    <button type="button">Validate</button><br><br>
+    <p>Please enter file path and it's name, containing IBANS to validate.</p>
+    <form th:action="@{/upload}" method="post">
+        <input type="text" id="path" name="path">
+        <button type="Submit">Validate</button><br>
+        <span th:text="${msg}"></span>
+    </form>
     <form th:action="@{/}" method="get">
         <button type="Submit">Go to String Validator page</button>
     </form>
