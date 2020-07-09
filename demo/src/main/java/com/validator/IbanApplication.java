@@ -1,4 +1,4 @@
-package seb.iban;
+package com.validator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
