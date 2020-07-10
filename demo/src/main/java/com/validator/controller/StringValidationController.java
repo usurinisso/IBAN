@@ -13,7 +13,7 @@ public class StringValidationController {
 
     @Autowired private IbanIsValid validationService;
 
-    @RequestMapping( value = { "/", "/home" }, method = RequestMethod.GET )
+    @RequestMapping( value = { "/" }, method = RequestMethod.GET )
     public ModelAndView validate() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("validation");
@@ -21,9 +21,9 @@ public class StringValidationController {
     }
 
     @Controller
-    public class StringValidate {
+    public class stringValidate {
         @RequestMapping(value = { "/" }, method = RequestMethod.POST)
-        public ModelAndView validate(@RequestParam(name = "iban",  required = true) String iban) {
+        public ModelAndView validate(@RequestParam(name = "iban") String iban) {
             ModelAndView modelAndView = new ModelAndView();
             if(validationService.isValid(iban))
             {
