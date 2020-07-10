@@ -8,8 +8,11 @@
 
     <h1>IBAN Validator</h1>
     <p>Please enter IBAN to validate.</p>
-    <input type="text" id="iban" name="iban">
-    <button type="button">Validate</button><br><br>
+    <form th:action="@{/}" method="post">
+        <input type="text" id="iban" name="iban">
+        <button type="Submit">Validate</button><br>
+        <span th:text="${msg}"></span>
+    </form>
     <form th:action="@{/upload}" method="get">
         <button type="Submit">Go to File Validator page</button>
     </form>
