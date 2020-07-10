@@ -29,7 +29,7 @@ public class IbanIsValidImpl implements IbanIsValid{
             int index = Arrays.asList(IBAN_CODE_COUNTRY).indexOf(code[0]);
             if ( index == -1 || IBAN_CODE_LENGTHS[index] != iban.length() ) return false; //checks if country code is valid, and if so, checks the IBAN length
             else {
-                for(int i = 0; i < 2; i += 2) {
+                for(int i = 0; i <= 2; i += 2) {
                     StringBuilder codeBuild = new StringBuilder();
                     for (int j = 0; j < code[i].length(); j++) {
                         char tmpChar = code[i].charAt(j);
